@@ -3,8 +3,8 @@ pipeline{
     stages{ 
         stage('Create init'){
             steps{
-                sh "touch /excercises/__init__.py"
-                sh "touch /tests/__init__.py"
+                sh "touch ./excercises/__init__.py"
+                sh "touch ./tests/__init__.py"
             }
         }
         stage('---Test Uno---'){
