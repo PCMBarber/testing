@@ -1,6 +1,12 @@
 pipeline{
     agent any
     stages{ 
+        stage('Create init'){
+            steps{
+                sh "touch /excercises/__init__.py"
+                sh "touch /tests/__init__.py"
+            }
+        }
         stage('---Test Uno---'){
             steps{
                 sh "pytest tests/anti_vowel_test.py"
